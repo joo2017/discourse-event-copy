@@ -5,8 +5,6 @@
 # authors: Your Name
 # url: https://github.com/joo2017/discourse-event-copy
 
-enabled_site_setting :discourse_post_event_enabled
-
 register_asset "stylesheets/colors.scss"
 register_asset "stylesheets/common/discourse-calendar.scss"
 register_asset "stylesheets/common/discourse-post-event-bulk-invite-modal.scss"
