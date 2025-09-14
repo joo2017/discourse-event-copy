@@ -1,5 +1,4 @@
 import { withPluginApi } from "discourse/lib/plugin-api";
-// 修改路径
 import DiscoursePostEventEvent from "discourse/plugins/discourse-event-copy/discourse/models/discourse-post-event-event";
 import PostEventBuilder from "../components/modal/post-event-builder";
 
