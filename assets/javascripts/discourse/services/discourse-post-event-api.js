@@ -1,8 +1,8 @@
 import Service from "@ember/service";
 import { ajax } from "discourse/lib/ajax";
-import DiscoursePostEventEvent from "discourse/plugins/discourse-calendar/discourse/models/discourse-post-event-event";
-import DiscoursePostEventInvitee from "discourse/plugins/discourse-calendar/discourse/models/discourse-post-event-invitee";
-import DiscoursePostEventInvitees from "discourse/plugins/discourse-calendar/discourse/models/discourse-post-event-invitees";
+import DiscoursePostEventEvent from "discourse/plugins/discourse-event-copy/discourse/models/discourse-post-event-event";
+import DiscoursePostEventInvitee from "discourse/plugins/discourse-event-copy/discourse/models/discourse-post-event-invitee";
+import DiscoursePostEventInvitees from "discourse/plugins/discourse-event-copy/discourse/models/discourse-post-event-invitees";
 
 
 /**
