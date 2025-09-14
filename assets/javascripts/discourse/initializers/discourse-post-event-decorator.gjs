@@ -1,8 +1,9 @@
 import { isTesting } from "discourse/lib/environment";
 import { withPluginApi } from "discourse/lib/plugin-api";
 import I18n, { i18n } from "discourse-i18n";
-import DiscoursePostEvent from "discourse/plugins/discourse-calendar/discourse/components/discourse-post-event";
-import DiscoursePostEventEvent from "discourse/plugins/discourse-calendar/discourse/models/discourse-post-event-event";
+// 修改这些导入路径
+import DiscoursePostEvent from "discourse/plugins/discourse-event-copy/discourse/components/discourse-post-event";
+import DiscoursePostEventEvent from "discourse/plugins/discourse-event-copy/discourse/models/discourse-post-event-event";
 import guessDateFormat from "../lib/guess-best-date-format";
 
 export function buildEventPreview(eventContainer) {
