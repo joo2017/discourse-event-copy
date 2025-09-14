@@ -26,7 +26,7 @@ register_asset "stylesheets/mobile/discourse-post-event-invitees.scss"
 register_asset "stylesheets/mobile/discourse-post-event.scss"
 
 register_svg_icon "calendar-day"
-register_svg_icon "check" 
+register_svg_icon "check"
 register_svg_icon "xmark"
 register_svg_icon "star"
 register_svg_icon "users"
@@ -39,20 +39,24 @@ register_svg_icon "chevron-left"
 register_svg_icon "chevron-right"
 register_svg_icon "arrow-rotate-left"
 
-# 添加路由映射
-add_to_serializer(:current_user, :can_create_discourse_post_event) do
-  true
-end
-
 module ::DiscourseCalendar
   PLUGIN_NAME = "discourse-event-copy"
 end
 
-module ::DiscoursePostEvent  
+module ::DiscoursePostEvent
   PLUGIN_NAME = "discourse-event-copy"
 end
 
 after_initialize do
+  # 将此属性添加到 CurrentUserSerializer，以便客户端知道当前用户是否可以创建事件。
+  # 必须在 after_initialize 内部执行，以确保 CurrentUserSerializer 类已加载。
+  add_to_serializer(:current_user, :can_create_discourse_post_event) do
+    # 'scope' 是 Guardian 对象，用于权限检查。
+    # 这假定您的插件在别处定义了 can_create_post_event? 权限。
+    # 如果没有，您可以暂时换回 `true`，但这会给予所有用户权限。
+    scope.can_create_post_event?
+  end
+
   # 添加路由
   Discourse::Application.routes.draw do
     get "/upcoming-events" => "application#index", constraints: { format: 'html' }
