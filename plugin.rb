@@ -26,7 +26,7 @@ register_asset "stylesheets/mobile/discourse-post-event-invitees.scss"
 register_asset "stylesheets/mobile/discourse-post-event.scss"
 
 register_svg_icon "calendar-day"
-register_svg_icon "check" 
+register_svg_icon "check"
 register_svg_icon "xmark"
 register_svg_icon "star"
 register_svg_icon "users"
@@ -53,11 +53,6 @@ module ::DiscourseCalendar
   PLUGIN_NAME = "discourse-event-copy"
 end
 
-module ::DiscoursePostEvent  
+module ::DiscoursePostEvent
   PLUGIN_NAME = "discourse-event-copy"
 end
-
-# 暂时注释掉所有后端相关代码，只保留前端
-# after_initialize do
-#   # 后端代码将在后续添加
-# end
