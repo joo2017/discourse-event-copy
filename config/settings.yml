@@ -28,7 +28,7 @@ discourse_post_event:
     client: true
     default: ""
   sidebar_show_upcoming_events:
-    default: true
+    default: false
     client: true
   event_participation_buttons:
     default: "going|interested|not going"
