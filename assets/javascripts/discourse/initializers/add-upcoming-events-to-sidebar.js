@@ -14,7 +14,7 @@ export default {
         api.addCommunitySectionLink((baseSectionLink) => {
           return class UpcomingEventsSectionLink extends baseSectionLink {
             name = "upcoming-events";
-            route = "discourse-post-event-upcoming-events.index"; // 修改这里
+            route = "discourse-post-event-upcoming-events"; // 使用基础路由名
             text = i18n("discourse_post_event.upcoming_events.title");
             title = i18n("discourse_post_event.upcoming_events.title");
             defaultPrefixValue = "calendar-day";
