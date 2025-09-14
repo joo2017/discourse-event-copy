@@ -3,7 +3,7 @@
 # about: A complete copy of discourse-calendar event functionality
 # version: 1.0.0
 # authors: Your Name
-# url: https://github.com/yourusername/discourse-event-copy
+# url: https://github.com/joo2017/discourse-event-copy
 
 enabled_site_setting :discourse_post_event_enabled
 
@@ -34,6 +34,15 @@ register_svg_icon "location-pin"
 register_svg_icon "link"
 register_svg_icon "clock"
 register_svg_icon "ellipsis"
+register_svg_icon "globe"
+register_svg_icon "chevron-left"
+register_svg_icon "chevron-right"
+register_svg_icon "arrow-rotate-left"
+
+# 添加路由映射
+add_to_serializer(:current_user, :can_create_discourse_post_event) do
+  true
+end
 
 module ::DiscourseCalendar
   PLUGIN_NAME = "discourse-event-copy"
@@ -41,4 +50,12 @@ end
 
 module ::DiscoursePostEvent  
   PLUGIN_NAME = "discourse-event-copy"
+end
+
+after_initialize do
+  # 添加路由
+  Discourse::Application.routes.draw do
+    get "/upcoming-events" => "application#index", constraints: { format: 'html' }
+    get "/upcoming-events/mine" => "application#index", constraints: { format: 'html' }
+  end
 end
