@@ -3,7 +3,7 @@
 # about: A complete copy of discourse-calendar event functionality
 # version: 1.0.0
 # authors: Your Name
-# url: https://github.com/yourusername/discourse-event-copy
+# url: https://github.com/joo2017/discourse-event-copy
 
 enabled_site_setting :discourse_post_event_enabled
 
@@ -34,6 +34,20 @@ register_svg_icon "location-pin"
 register_svg_icon "link"
 register_svg_icon "clock"
 register_svg_icon "ellipsis"
+register_svg_icon "envelope"
+register_svg_icon "user-plus"
+register_svg_icon "user-group"
+register_svg_icon "file-csv"
+register_svg_icon "file-arrow-up"
+register_svg_icon "unlock"
+register_svg_icon "pencil"
+register_svg_icon "plus"
+register_svg_icon "trash-can"
+register_svg_icon "globe"
+register_svg_icon "upload"
+register_svg_icon "chevron-left"
+register_svg_icon "chevron-right"
+register_svg_icon "arrow-rotate-left"
 
 module ::DiscourseCalendar
   PLUGIN_NAME = "discourse-event-copy"
@@ -42,3 +56,8 @@ end
 module ::DiscoursePostEvent  
   PLUGIN_NAME = "discourse-event-copy"
 end
+
+# 暂时注释掉所有后端相关代码，只保留前端
+# after_initialize do
+#   # 后端代码将在后续添加
+# end
