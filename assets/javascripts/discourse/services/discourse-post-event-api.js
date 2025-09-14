@@ -1,8 +1,10 @@
 import Service from "@ember/service";
 import { ajax } from "discourse/lib/ajax";
-import DiscoursePostEventEvent from "discourse/plugins/discourse-calendar/discourse/models/discourse-post-event-event";
-import DiscoursePostEventInvitee from "discourse/plugins/discourse-calendar/discourse/models/discourse-post-event-invitee";
-import DiscoursePostEventInvitees from "discourse/plugins/discourse-calendar/discourse/models/discourse-post-event-invitees";
+// 修改这些路径
+import DiscoursePostEventEvent from "discourse/plugins/discourse-event-copy/discourse/models/discourse-post-event-event";
+import DiscoursePostEventInvitee from "discourse/plugins/discourse-event-copy/discourse/models/discourse-post-event-invitee";
+import DiscoursePostEventInvitees from "discourse/plugins/discourse-event-copy/discourse/models/discourse-post-event-invitees";
+
 
 /**
  * Discoure post event API service. Provides methods to interact with the discourse post event API.
