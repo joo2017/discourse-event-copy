@@ -1,0 +1,48 @@
+discourse_post_event:
+  discourse_post_event_enabled:
+    default: false
+    client: true
+  displayed_invitees_limit:
+    default: 10
+    client: false
+    max: 25
+  display_post_event_date_on_topic_title:
+    default: true
+    client: true
+  use_local_event_date:
+    default: false
+    client: true
+  discourse_post_event_allowed_on_groups:
+    client: true
+    type: group_list
+    list_type: compact
+    default: ""
+    allow_any: false
+    refresh: true
+  discourse_post_event_edit_notifications_time_extension:
+    default: 0
+    min: 0
+  discourse_post_event_allowed_custom_fields:
+    type: list
+    list_type: simple
+    client: true
+    default: ""
+  sidebar_show_upcoming_events:
+    default: true
+    client: true
+  event_participation_buttons:
+    default: "going|interested|not going"
+    client: true
+    type: list
+    list_type: simple
+    allow_any: false
+    choices:
+      - going
+      - interested
+      - not going
+  events_max_rows:
+    default: 2
+    client: true
+  include_expired_events_on_calendar:
+    default: false
+    client: true
