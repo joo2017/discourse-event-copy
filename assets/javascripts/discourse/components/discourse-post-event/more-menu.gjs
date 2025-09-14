@@ -102,10 +102,10 @@ export default class DiscoursePostEventMoreMenu extends Component {
     );
   }
 
-  @action
-  upcomingEvents() {
-    this.router.transitionTo("discourse-post-event-upcoming-events");
-  }
+@action
+upcomingEvents() {
+  this.router.transitionTo("discourse-post-event-upcoming-events.index");
+}
 
   @action
   registerMenuApi(api) {
